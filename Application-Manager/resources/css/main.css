@@ -1,0 +1,64 @@
+body {
+    font-family: 'Open Sans Regular';
+    background-image: url('/img/dulcedo-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+hr {
+    height: 2px;
+	background-color: white;
+}
+
+h1, h2, h3, h4, h5 {
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px gray;
+}
+
+.btn-primary, .input-group-text, .card, .card-header, .card-body {
+    background-color: white;
+    border-color: #AB8D3F;
+    color: #AB8D3F;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: #AB8D3F;
+    border-color: white;
+    color: white;
+}
+
+.text-primary, .btn-link {
+    color: #AB8D3F;
+}
+
+.btn-secondary, .card-secondary {
+    color: darkgrey;
+    border-color: darkgrey;
+    background-color: white;
+}
+
+.badge-error {
+    color: darkred;
+}
+
+.in-input {
+    float: right;
+    margin-right: 10px;
+    margin-top: -28.5px;
+    position: relative;
+}
+
+.in-input-pill {
+    float: right;
+    margin-right: 36px;
+    margin-top: -29px;
+    position: relative;
+    color: gray;
+    border-color: gray;
+}
+
+.hide {
+    display: none;
+}
