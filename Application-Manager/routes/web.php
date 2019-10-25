@@ -39,6 +39,10 @@ Route::post('/getApplicationInfo', 'ApplicationProfileController@getInfoById');
 
 // Application Search
 Route::get('/applications/search', 'ApplicationSearchController@index');
+Route::post('/searchByApplicant', 'ApplicationSearchController@getApplicationByApplicantInfo');
+Route::post('/searchByStatus', 'ApplicationSearchController@getApplicationByStatus');
+Route::post('/searchByEvent', 'ApplicationSearchController@getApplicationByEvent'); 
+Route::post('/getEventStatusList', 'ApplicationSearchController@getEventStatusList');
 
 // Invite Management
 Route::get('/applications/invites/manage', 'InviteManagementController@index');
@@ -51,3 +55,7 @@ Route::get('/event/form/{id}/{lang}', 'EventFormController@index');
 
 // Invitational Form
 Route::get('/invite/form/{id}/{lang}', 'InviteFormController@index');
+
+
+// Application List
+Route::get('/application/list', 'ApplicationListController@index');

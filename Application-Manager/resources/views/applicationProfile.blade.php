@@ -193,7 +193,7 @@
 </div>
 
 {{-- Answers --}}
-<div class='container' id="qas">
+<div class='container text-lowercase' id="qas">
         <hr/>
         <h5 class='text-dark'>Questions and Answers:</h5>
 </div>
@@ -249,7 +249,7 @@ $(document).ready(function(){
 
                                         if(test.questions && test.answers && (test.questions.length === test.answers.length)){
                                                 for(var j=0; j<test.questions.length; j++){
-                                                        let qaBlock = '<div class="w-100 my-2"><h5 class="text-dark font-weight-bold text-capitalize" style="text-shadow: none;"><span class="badge '+((test.answers[j] === '') ? 'badge-danger' : 'badge-dark')+'">Question '+(j+1)+':</span>&nbsp;&nbsp;'+test.questions[j]+': &nbsp;</h5>&emsp;&emsp;<span class="badge badge-success">Answer:</span><p class="ml-5 pl-5 text-justify '+((test.answers[j] === "")? "bg-warning" : "")+'">'+((test.answers[j] === "")? "Not responded by applicant!" : test.answers[j])+'</p><hr/></div>';
+                                                        let qaBlock = '<div class="w-100 my-2 text-lowercase"><h5 class="text-dark font-weight-bold text-capitalize" style="text-shadow: none;"><span class="badge '+((test.answers[j] === '') ? 'badge-danger' : 'badge-dark')+'">Question '+(j+1)+':</span><span class="text-lowercase">&nbsp;<span>&nbsp;'+test.questions[j]+': &nbsp;</p></h5>&emsp;&emsp;<span class="badge badge-success">Answer:</span><p class="ml-5 pl-5 text-justify '+((test.answers[j] === "")? "bg-warning" : "")+'">'+((test.answers[j] === "")? "Not responded by applicant!" : test.answers[j])+'</p><hr/></div>';
                                                         $('#qas').append(qaBlock);
                                                 }
                                         }else{
