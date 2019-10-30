@@ -59,3 +59,5 @@ Route::get('/invite/form/{id}/{lang}', 'InviteFormController@index');
 
 // Application List
 Route::get('/application/list', 'ApplicationListController@index');
+Route::post('/getApplications', 'ApplicationListController@getApplications');
+Route::post('/totalResults', 'ApplicationListController@totalResults');
