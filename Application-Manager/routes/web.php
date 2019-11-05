@@ -49,6 +49,24 @@ Route::get('/applications/invites/manage', 'InviteManagementController@index');
 
 // Event Management
 Route::get('/events/manage', 'EventManagementController@index');
+Route::get('/events/new', 'EventManagementController@add');
+Route::post('/events/manage', 'EventManagementController@recordEvent');
+Route::get('/events/getAllEvents', 'EventManagementController@getAllEvents');
+Route::get('storage/{filename}', function ($filename){
+    $path = storage_path('public/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
 
 // Event Form
 Route::get('/event/form/{id}/{lang}', 'EventFormController@index');

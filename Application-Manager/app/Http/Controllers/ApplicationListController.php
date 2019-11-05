@@ -36,7 +36,6 @@ class ApplicationListController extends Controller
         $from = $request->input('from');
 
         $contacts = [];
-        // $result = DB::table('applications')->get();
         $result = DB::table('applications')->orderBy('id')->get()->skip((($from*$howMany-1) < 0) ? 0 : ($from*$howMany-1))->take($howMany);
 
         foreach ($result as $application) {
